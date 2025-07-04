@@ -1,0 +1,1 @@
+ npx node-pg-migrate create create-transaction-migration
