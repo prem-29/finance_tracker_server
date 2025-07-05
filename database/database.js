@@ -2,10 +2,10 @@ import pkg from 'pg';
 const { Client } = pkg;
 const client = new Client({
     user: "dbuser",
-    host: "localhost",
-    database: "finance_tracker",
+    host: "maglev.proxy.rlwy.net",
+    database: "railway",
     password: "dbpass",
-    port: "5432",
+    port: "36611",
 });
 client.connect()
     .then(() => console.log('✅ Connected to PostgreSQL'))
