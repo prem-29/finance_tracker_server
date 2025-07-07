@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "cross-env node-pg-migrate -d $DATABASE_URL",
+    "migrate": "node-pg-migrate -d $DATABASE_URL --verbose --single-transaction",
     "start": "nodemon src/index.js"
   },
   "keywords": [],
