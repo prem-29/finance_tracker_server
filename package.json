@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "node-pg-migrate",
+    "migrate": "cross-env node-pg-migrate -d $DATABASE_URL",
     "start": "nodemon src/index.js"
   },
   "keywords": [],
@@ -18,9 +18,10 @@
     "express": "^4.21.2",
     "jsonwebtoken": "^9.0.2",
     "node-pg-migrate": "^7.9.0",
-    "pg": "^8.13.1"
+    "pg": "^8.16.3"
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "nodemon": "^3.1.9"
   }
 }
