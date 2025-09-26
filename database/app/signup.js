@@ -6,14 +6,16 @@ const signup = async (userData) => {
             INSERT INTO users (
                 name,
                 email,
-                password
-            ) VALUES ($1, $2, $3) RETURNING *;
+                password,
+                is_verified
+            ) VALUES ($1, $2, $3, $4) RETURNING *;
         `;
 
         const values = [
             userData.name,
             userData.email,
-            userData.password
+            userData.password,
+            false
         ];
 
         const result = await client.query(query, values);

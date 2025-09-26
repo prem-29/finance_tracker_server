@@ -8,11 +8,10 @@ const login = async (userData) => {
     try {
         const query = `
             SELECT id,name,email FROM users
-            WHERE email = $1 AND password = $2;
+            WHERE email = $1 AND password = $2 AND is_verified = true AND is_deleted = false;
         `;
 
         const values = [userData.email, userData.password];
-
         const result = await client.query(query, values);
         const user = result.rows[0];
 
