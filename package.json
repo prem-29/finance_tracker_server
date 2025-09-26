@@ -6,7 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "migrate": "node-pg-migrate",
+    "migrate": "npx node-pg-migrate up --migrations-dir migrations --schema public",
     "start": "nodemon src/index.js"
   },
   "keywords": [],
