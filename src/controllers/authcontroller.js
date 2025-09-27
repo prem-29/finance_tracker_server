@@ -39,7 +39,7 @@ export const signupController = async (req, res) => {
         } catch (error) {
             console.error("Error sending email:", error);
         }
-        res.status(201).json({ message: "Signup successful! Please check your email to verify.", user, success: true });
+        res.status(201).json({ message: "Signup successful! Please check your email to verify.", success: true });
     } catch (error) {
         res.status(500).json({ message: 'Error during signup', error: error.message, success: false });
     }
