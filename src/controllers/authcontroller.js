@@ -35,7 +35,7 @@ export const signupController = async (req, res) => {
         // Send email via Brevo API
         try {
             const response = await tranEmailApi.sendTransacEmail({
-                sender: { email: "your_verified_sender@domain.com", name: "Finance Tracker" }, // must be verified in Brevo
+                sender: { email: "svp107995@gmail.com", name: "Finance Tracker" }, // must be verified in Brevo
                 to: [{ email: user.email }],
                 subject: "Welcome to Finance Tracker",
                 htmlContent: `
